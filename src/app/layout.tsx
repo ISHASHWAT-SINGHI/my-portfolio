@@ -5,11 +5,10 @@ import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
 import ScrollProgress from '../components/ui/ScrollProgress'
 import BackToTop from '../components/ui/BackToTop'
-import { ThemeProvider } from '@/components/providers/ThemeProvider';
+import { ThemeProvider } from '../components/providers/ThemeProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
-// Remove any duplicate Metadata imports or declarations
 export const metadata: Metadata = {
   metadataBase: new URL('https://your-portfolio-url.vercel.app'),
   title: 'Shashwat Singh Rathour - Software Developer & Technical Mentor',
@@ -60,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider>
           <ScrollProgress />
