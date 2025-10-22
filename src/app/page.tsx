@@ -281,14 +281,14 @@ export default function Home() {
                   {/* 12th Standard */}
                   <div className="border-l-4 border-green-500 pl-4">
                     <h4 className="font-semibold text-gray-900">12th Standard - 92.6%</h4>
-                    <p className="text-gray-600">St. Anthony's Senior Secondary School, Barabanki</p>
+                    <p className="text-gray-600">St. Anthony&apos;s Senior Secondary School, Barabanki</p>
                     <p className="text-sm text-gray-500">2019 - 2021</p>
                   </div>
 
                   {/* 10th Standard */}
                   <div className="border-l-4 border-purple-500 pl-4">
                     <h4 className="font-semibold text-gray-900">10th Standard - 91.6%</h4>
-                    <p className="text-gray-600">St. Anthony's Senior Secondary School, Barabanki</p>
+                    <p className="text-gray-600">St. Anthony&apos;s Senior Secondary School, Barabanki</p>
                     <p className="text-sm text-gray-500">2017 - 2019</p>
                   </div>
                 </div>
@@ -490,7 +490,7 @@ export default function Home() {
             <div className="h-1 w-20 bg-blue-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Ready to collaborate on your next project? Have questions about my work? 
-              I'd love to hear from you. Let's build something amazing together!
+              I&apos;d love to hear from you. Let&apos;s build something amazing together!
             </p>
           </div>
 

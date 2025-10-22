@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "next build ",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "critters": "^0.0.23",
     "framer-motion": "^12.23.24",
     "next": "15.5.6",
     "react": "19.1.0",

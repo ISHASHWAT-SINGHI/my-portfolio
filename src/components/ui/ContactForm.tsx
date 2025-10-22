@@ -49,7 +49,7 @@ export default function ContactForm() {
         <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
           <div className="text-green-600 text-4xl mb-3">✅</div>
           <h4 className="text-green-800 font-semibold mb-2">Message Sent Successfully!</h4>
-          <p className="text-green-700">Thank you for your message. I'll get back to you soon.</p>
+          <p className="text-green-700">Thank you for your message. I&apos;ll get back to you soon.</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">

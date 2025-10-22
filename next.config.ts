@@ -4,8 +4,12 @@ const nextConfig = {
     domains: ['images.unsplash.com'],
     formats: ['image/webp', 'image/avif'],
   },
-  experimental: {
-    optimizeCss: true,
+  // Remove experimental features for stability
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  eslint: {
+    ignoreDuringBuilds: false,
   },
 }
 

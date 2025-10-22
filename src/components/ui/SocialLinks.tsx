@@ -40,9 +40,9 @@ export default function SocialLinks() {
 
   return (
     <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl border border-blue-200 p-8">
-      <h3 className="text-2xl font-semibold text-gray-900 mb-6">Let's Connect</h3>
+      <h3 className="text-2xl font-semibold text-gray-900 mb-6">Let&apos;s Connect</h3>
       <p className="text-gray-600 mb-8">
-        I'm always open to discussing new opportunities, technical collaborations, 
+        I&apos;m always open to discussing new opportunities, technical collaborations, 
         or just having a chat about technology and innovation.
       </p>
       
