@@ -1,6 +1,7 @@
 'use client';
 
 import { Project } from '@/data/projects';
+import Image from 'next/image';
 
 interface ProjectCardProps {
   project: Project;
@@ -42,11 +43,13 @@ export default function ProjectCard({ project, onViewDetails }: ProjectCardProps
     <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
       {/* Project Image with Themed Overlay */}
       <div className="h-48 relative overflow-hidden group">
-        {/* Background Image */}
-        <img 
+        {/* Background Image using Next.js Image component */}
+        <Image
           src={project.imageUrl}
           alt={project.title}
-          className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+          fill
+          className="object-cover transition duration-500 group-hover:scale-110"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         
         {/* Themed Color Overlay */}

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { projects } from '@/data/projects';
+import { projects, Project } from '@/data/projects';
 import ProjectCard from '@/components/ui/ProjectCard';
 import ProjectsFilter from '@/components/ui/ProjectsFilter';
 import ContactForm from '@/components/ui/ContactForm';
@@ -9,7 +9,6 @@ import SocialLinks from '@/components/ui/SocialLinks';
 import PageTransition from '@/components/ui/PageTransition';
 import ProjectModal from '@/components/ui/ProjectModal';
 
-// Add the ProjectsSection component function HERE (before the main Home function)
 // Add the ProjectsSection component function HERE (before the main Home function)
 function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState('all');

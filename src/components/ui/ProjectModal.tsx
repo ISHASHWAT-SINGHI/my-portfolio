@@ -1,6 +1,7 @@
 'use client';
 
 import { Project } from '@/data/projects';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface ProjectModalProps {
@@ -54,10 +55,21 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
             >
               {/* Modal Header */}
               <div className="relative">
-                <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500 relative overflow-hidden rounded-t-2xl">
-                  <div className="absolute inset-0 flex items-center justify-center text-white">
-                    <span className="text-6xl">{getCategoryIcon(project.category)}</span>
+                <div className="h-48 relative overflow-hidden rounded-t-2xl">
+                  <Image
+                    src={project.imageUrl}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+                    
+                  {/* Category Icon Overlay */}
+                  <div className="absolute top-4 left-4 bg-white bg-opacity-90 rounded-full p-2">
+                    <span className="text-xl">{getCategoryIcon(project.category)}</span>
                   </div>
+                    
                   {project.featured && (
                     <div className="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                       Featured
