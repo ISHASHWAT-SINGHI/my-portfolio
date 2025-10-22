@@ -7,16 +7,30 @@ import ProjectsFilter from '@/components/ui/ProjectsFilter';
 import ContactForm from '@/components/ui/ContactForm';
 import SocialLinks from '@/components/ui/SocialLinks';
 import PageTransition from '@/components/ui/PageTransition';
+import ProjectModal from '@/components/ui/ProjectModal';
 
+// Add the ProjectsSection component function HERE (before the main Home function)
 // Add the ProjectsSection component function HERE (before the main Home function)
 function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState('all');
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const filteredProjects = projects.filter(project => {
     if (activeFilter === 'all') return true;
     if (activeFilter === 'featured') return project.featured;
     return project.category === activeFilter;
   });
+
+  const handleViewDetails = (project: Project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
 
   return (
     <>
@@ -29,7 +43,11 @@ function ProjectsSection() {
       {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredProjects.map(project => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard 
+            key={project.id} 
+            project={project} 
+            onViewDetails={handleViewDetails}
+          />
         ))}
       </div>
 
@@ -69,6 +87,13 @@ function ProjectsSection() {
           </div>
         </div>
       </div>
+
+      {/* Project Modal */}
+      <ProjectModal 
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={closeModal}
+      />
     </>
   );
 }

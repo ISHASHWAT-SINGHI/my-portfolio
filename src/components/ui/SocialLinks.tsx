@@ -2,41 +2,69 @@ export default function SocialLinks() {
   const socialLinks = [
     {
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/shashwat-singh-a366662',
+      url: 'https://www.linkedin.com/in/shashwat-singh-a36666262/',
       icon: '💼',
-      description: 'Professional profile and experience'
+      description: 'Professional profile and experience',
+      type: 'external'
     },
     {
       name: 'Email',
       url: 'mailto:ssrathour45@gmail.com',
       icon: '📧',
-      description: 'ssrathour45@gmail.com'
+      description: 'ssrathour45@gmail.com',
+      type: 'email'
     },
     {
       name: 'Phone',
       url: 'tel:+919415176555',
       icon: '📱',
-      description: '+91 9415176555'
+      description: '+91 9415176555',
+      type: 'phone'
     },
     {
       name: 'GitHub',
-      url: '#', // Add your GitHub URL when available
+      url: 'https://github.com/ISHASHWAT-SINGHI', // Your GitHub username
       icon: '💻',
-      description: 'Code repositories and projects'
-    },
-    {
-      name: 'Resume',
-      url: '#', // Add your resume URL when available
-      icon: '📄',
-      description: 'Download my resume'
+      description: 'Code repositories and projects',
+      type: 'external'
     },
     {
       name: 'Location',
-      url: '#',
+      url: 'https://maps.google.com/?q=Barabanki,Uttar+Pradesh,India',
       icon: '📍',
-      description: 'Barabanki, India'
+      description: 'Barabanki, India',
+      type: 'external'
+    },
+    {
+      name: 'Resume',
+      url: '#', // We'll add this later when you have the file
+      icon: '📄',
+      description: 'Download my resume',
+      type: 'disabled'
     }
   ];
+
+  const getLinkProps = (link: typeof socialLinks[0]) => {
+    switch (link.type) {
+      case 'external':
+        return {
+          target: '_blank',
+          rel: 'noopener noreferrer nofollow'
+        };
+      case 'email':
+      case 'phone':
+        return {};
+      case 'disabled':
+        return {
+          onClick: (e: React.MouseEvent) => {
+            e.preventDefault();
+            alert('Resume will be available soon!');
+          }
+        };
+      default:
+        return {};
+    }
+  };
 
   return (
     <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl border border-blue-200 p-8">
@@ -51,18 +79,29 @@ export default function SocialLinks() {
           <a
             key={index}
             href={link.url}
-            target={link.url.startsWith('http') ? '_blank' : '_self'}
-            rel={link.url.startsWith('http') ? 'noopener noreferrer' : ''}
-            className="flex items-center gap-4 p-4 bg-white rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition duration-300 group"
+            {...getLinkProps(link)}
+            className={`flex items-center gap-4 p-4 rounded-lg border transition duration-300 group ${
+              link.type === 'disabled' 
+                ? 'bg-gray-100 border-gray-300 text-gray-400 cursor-not-allowed' 
+                : 'bg-white border-gray-200 hover:border-blue-300 hover:shadow-md'
+            }`}
           >
-            <div className="text-2xl group-hover:scale-110 transition duration-300">
+            <div className={`text-2xl transition duration-300 ${
+              link.type === 'disabled' ? '' : 'group-hover:scale-110'
+            }`}>
               {link.icon}
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition duration-300">
+              <h4 className={`font-semibold transition duration-300 ${
+                link.type === 'disabled' ? 'text-gray-400' : 'text-gray-900 group-hover:text-blue-600'
+              }`}>
                 {link.name}
               </h4>
-              <p className="text-sm text-gray-600">{link.description}</p>
+              <p className={`text-sm ${
+                link.type === 'disabled' ? 'text-gray-400' : 'text-gray-600'
+              }`}>
+                {link.description}
+              </p>
             </div>
           </a>
         ))}
