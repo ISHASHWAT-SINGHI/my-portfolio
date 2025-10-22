@@ -5,6 +5,7 @@ import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
 import ScrollProgress from '../components/ui/ScrollProgress'
 import BackToTop from '../components/ui/BackToTop'
+import { ThemeProvider } from '@/components/providers/ThemeProvider';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -61,11 +62,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ScrollProgress />
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <BackToTop />
+        <ThemeProvider>
+          <ScrollProgress />
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <BackToTop />
+        </ThemeProvider>
       </body>
     </html>
   )

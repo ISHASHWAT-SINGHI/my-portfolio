@@ -102,7 +102,7 @@ export default function Home() {
     <div>
       {/* Home/Hero Section */}
       <PageTransition>
-      <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50">
+      <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
 
@@ -110,7 +110,7 @@ export default function Home() {
             <div className="flex-1 text-center lg:text-left">
               {/* Main Title */}
               <div className="mb-6">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-2">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-2">
                   Shashwat Singh <span className="text-blue-600">Rathour</span>
                 </h1>
                 <div className="h-1 w-20 bg-blue-500 mx-auto lg:mx-0 mb-4"></div>
@@ -118,7 +118,7 @@ export default function Home() {
 
               {/* Role-Adaptive Subtitle */}
               <div className="mb-6">
-                <h2 className="text-xl sm:text-2xl text-gray-700 mb-2">
+                <h2 className="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 mb-2">
                   <span className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                     Software Developer
                   </span>
@@ -130,15 +130,15 @@ export default function Home() {
 
               {/* Role-Specific Summary */}
               <div className="mb-8">
-                <p className="text-lg text-gray-600 mb-4 leading-relaxed">
+                <p className="text-lg text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                   <span className="font-semibold text-blue-600">Web Developer :</span> Building responsive, 
                   user-friendly applications with modern frameworks and clean code.
                 </p>
-                <p className="text-lg text-gray-600 mb-4 leading-relaxed">
+                <p className="text-lg text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                   <span className="font-semibold text-green-600">IoT Specialist :</span> Creating innovative 
                   hardware-software solutions for real-world problems using embedded systems.
                 </p>
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-lg text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                   <span className="font-semibold text-purple-600">Technical Mentor:</span> Passionate about knowledge 
                   sharing, with experience leading workshops and mentoring 100+ students.
                 </p>
@@ -184,24 +184,25 @@ export default function Home() {
               </div>
 
               {/* Universal Achievements */}
-              <div className="bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg p-4 mb-8 border border-blue-200">
-                <h3 className="font-semibold text-gray-700 mb-3 text-center">Proven Track Record</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                  <div className="flex items-center gap-2">
-                    <span className="text-yellow-500 text-lg">🏆</span>
-                    <span>Gold Medalist - AKTU Tech Competitions 2024</span>
+              <div className="bg-gradient-to-r from-blue-100 to-purple-100 dark:from-gray-800 dark:to-gray-700 rounded-lg p-4 mb-8 border border-blue-200 dark:border-gray-600">
+
+                <h3 className="font-semibold text-gray-700 dark:text-gray-300 mb-3 text-center">Proven Track Record</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                  <div className="flex items-center gap-3 rounded-lg p-3">
+                    <span className="text-yellow-300 text-xl">🏆</span>
+                    <span className="text-white font-medium">Gold Medalist - AKTU Tech Competitions 2024</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-blue-500 text-lg">👥</span>
-                    <span>Led 10+ Workshops for 100+ Students</span>
+                  <div className="flex items-center gap-3 rounded-lg p-3">
+                    <span className="text-blue-200 text-xl">👥</span>
+                    <span className="text-white font-medium">Led 10+ Workshops for 100+ Students</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-green-500 text-lg">🤖</span>
-                    <span>Robotics Club Coordinator & IoT Developer</span>
+                  <div className="flex items-center gap-3 rounded-lg p-3">
+                    <span className="text-green-200 text-xl">🤖</span>
+                    <span className="text-white font-medium">Robotics Club Coordinator & IoT Developer</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-purple-500 text-lg">☁️</span>
-                    <span>IBM Cloud & Serverless Certified</span>
+                  <div className="flex items-center gap-3 rounded-lg p-3">
+                    <span className="text-purple-200 text-xl">☁️</span>
+                    <span className="text-white font-medium">IBM Cloud & Serverless Certified</span>
                   </div>
                 </div>
               </div>
@@ -254,14 +255,14 @@ export default function Home() {
 
       <PageTransition>
       {/* About Section */}
-      <section id="about" className="py-20 bg-white">
+      <section id="about" className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
             <div className="h-1 w-20 bg-blue-500 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               A passionate technologist with expertise across software development, IoT innovation, 
               and technical education. Combining hands-on technical skills with proven leadership experience.
             </p>
@@ -273,15 +274,15 @@ export default function Home() {
             <div className="space-y-8">
 
               {/* Professional Journey */}
-              <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+                  <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                   <span className="text-blue-500">🚀</span> My Journey
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
                   Started as a curious student fascinated by technology, evolved into a technical leader 
                   mentoring 100+ students while building innovative projects in web development and IoT.
                 </p>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
                   My experience at <span className="font-semibold text-blue-600">GeeksforGeeks</span> as a 
                   Technical Lead has honed my ability to explain complex concepts and lead technical workshops, 
                   while my competition wins demonstrate strong problem-solving and innovation skills.
@@ -289,8 +290,8 @@ export default function Home() {
               </div>
 
               {/* Education */}
-              <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-6 flex items-center gap-2">
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                  <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
                   <span className="text-green-500">🎓</span> Education
                 </h3>
 
@@ -324,8 +325,8 @@ export default function Home() {
             <div className="space-y-8">
 
               {/* Technical Skills */}
-              <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-6 flex items-center gap-2">
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
                   <span className="text-orange-500">💻</span> Technical Skills
                 </h3>
 
@@ -409,8 +410,8 @@ export default function Home() {
               </div>
 
               {/* Certifications & Achievements */}
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-200">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-6 flex items-center gap-2">
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-xl p-6 border border-blue-200 dark:border-gray-600">
+                  <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
                   <span className="text-blue-500">🏆</span> Certifications & Achievements
                 </h3>
 
@@ -456,8 +457,8 @@ export default function Home() {
           </div>
 
           {/* Personal Interests */}
-          <div className="mt-16 bg-gray-50 rounded-xl p-8 border border-gray-200">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">Beyond Code</h3>
+          <div className="mt-16 bg-gray-50 dark:bg-gray-800 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">Beyond Code</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
               <div className="bg-white rounded-lg p-4 shadow-sm">
                 <span className="text-3xl mb-2 block">🤖</span>
@@ -483,14 +484,14 @@ export default function Home() {
 
       <PageTransition>
       {/* Projects Section */}
-      <section id="projects" className="py-20 bg-gray-50">
+      <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">My Projects</h2>
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">My Projects</h2>
             <div className="h-1 w-20 bg-blue-500 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Explore my technical work across web development, IoT, robotics, and cloud computing. 
               Each project represents real-world problem-solving and innovation.
             </p>
@@ -505,14 +506,14 @@ export default function Home() {
 
       <PageTransition>
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
+      <section id="contact" className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Get In Touch</h2>
             <div className="h-1 w-20 bg-blue-500 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Ready to collaborate on your next project? Have questions about my work? 
               I&apos;d love to hear from you. Let&apos;s build something amazing together!
             </p>
@@ -530,23 +531,23 @@ export default function Home() {
 
           {/* Additional Contact Info */}
           <div className="mt-16 text-center">
-            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Why Work With Me?</h3>
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">Why Work With Me?</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="text-center">
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
                   <div className="text-3xl mb-3">🚀</div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Fast Learner</h4>
-                  <p className="text-gray-600 text-sm">Quick to adapt to new technologies and frameworks</p>
+                  <h4 className="font-semibold text-gray-900 mb-2 dark:text-white mb-6">Fast Learner</h4>
+                  <p className="text-sm text-gray-900 dark:text-white mb-6">Quick to adapt to new technologies and frameworks</p>
                 </div>
-                <div className="text-center">
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
                   <div className="text-3xl mb-3">🎯</div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Problem Solver</h4>
-                  <p className="text-gray-600 text-sm">Proven track record in technical competitions</p>
+                  <h4 className="font-semibold text-gray-900 mb-2 dark:text-white mb-6">Problem Solver</h4>
+                  <p className="text-sm text-gray-900 dark:text-white mb-6">Proven track record in technical competitions</p>
                 </div>
-                <div className="text-center">
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
                   <div className="text-3xl mb-3">👨‍🏫</div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Team Player</h4>
-                  <p className="text-gray-600 text-sm">Experience mentoring and collaborating with teams</p>
+                  <h4 className="font-semibold text-gray-900 mb-2 dark:text-white mb-6">Team Player</h4>
+                  <p className="text-sm text-gray-900 dark:text-white mb-6">Experience mentoring and collaborating with teams</p>
                 </div>
               </div>
             </div>
