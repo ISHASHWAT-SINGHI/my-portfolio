@@ -2,7 +2,7 @@ export default function SocialLinks() {
   const socialLinks = [
     {
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/shashwat-singh-a366662/',
+      url: 'https://www.linkedin.com/in/shashwat-singh-a36666262/',
       icon: '💼',
       description: 'Professional profile and experience'
     },
@@ -26,13 +26,13 @@ export default function SocialLinks() {
     },
     {
       name: 'Resume',
-      url: '#', // Add your resume URL when available
+      url: 'https://drive.google.com/file/d/1HzDTYiW_-n9Dwq-927pDK9rj2hlb_XVi/view?usp=drive_link', // Add your resume URL when available
       icon: '📄',
       description: 'Download my resume'
     },
     {
       name: 'Location',
-      url: 'https://maps.app.goo.gl/wzWNNrD2cVC4gayJ7',
+      url: 'https://maps.app.goo.gl/wzWNNrD2cVC4gayJ7', // Google Maps link to Barabanki, India
       icon: '📍',
       description: 'Barabanki, India'
     }
