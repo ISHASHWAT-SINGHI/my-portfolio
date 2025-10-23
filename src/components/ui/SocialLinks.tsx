@@ -2,7 +2,7 @@ export default function SocialLinks() {
   const socialLinks = [
     {
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/shashwat-singh-a366662',
+      url: 'https://www.linkedin.com/in/shashwat-singh-a366662/',
       icon: '💼',
       description: 'Professional profile and experience'
     },
@@ -20,7 +20,7 @@ export default function SocialLinks() {
     },
     {
       name: 'GitHub',
-      url: '#', // Add your GitHub URL when available
+      url: 'https://github.com/ISHASHWAT-SINGHI', // Add your GitHub URL when available
       icon: '💻',
       description: 'Code repositories and projects'
     },
@@ -32,7 +32,7 @@ export default function SocialLinks() {
     },
     {
       name: 'Location',
-      url: '#',
+      url: 'https://maps.app.goo.gl/wzWNNrD2cVC4gayJ7',
       icon: '📍',
       description: 'Barabanki, India'
     }
